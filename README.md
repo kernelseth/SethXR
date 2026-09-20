@@ -1,4 +1,4 @@
-# sethxr
+# SethXR
 DIY middleware that turns old hardware into game input, eventually supporting full DIY VR.
 
 SethXR repurposes hardware such as **PlayStation Move controllers, PS3 Eye cameras, phone sensors, and gamepads** into usable input for games.
