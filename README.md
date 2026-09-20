@@ -58,7 +58,9 @@ Later setups may experiment with:
 * Multiple PS3 Eye cameras
 * Two PS Move controllers
 * HMD tracking
-* Full VR rendering
+* HMD-mounted tracking cameras
+* Stereo rendering and lens correction
+* VR runtimes such as OpenXR
 
 These are experimental directions rather than fixed requirements for the project.
 
@@ -94,7 +96,25 @@ nix develop
 python middleware/main.py
 ```
 
-The project is being developed incrementally, and software releases will use normal release/version numbers independently from the setup names.
+The project is being developed incrementally. Software releases will be tracked independently from the hardware setups described above.
+
+## Project layout
+
+```text
+sethxr/
+├── flake.nix
+├── vendor/
+│   └── psmoveapi/
+├── middleware/       # S1: reading input, mapping it, emitting it
+├── tracking/         # shared tracking and pose handling
+├── rendering/        # later setups: stereo rendering and lens correction
+├── config/
+│   └── settings.toml
+└── notes/
+    └── s1-log.md
+```
+
+The project layout is expected to change as SethXR develops and additional setups are implemented.
 
 ## License
 
